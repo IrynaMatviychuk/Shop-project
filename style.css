@@ -207,3 +207,43 @@ body {
     right: 130px;
     top: 20px;
 }
+
+.slider {
+    height: 400px;
+    background-color: #23599369;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 30px;
+    width: 270px;
+    height: 843px;
+    border-right: 1px solid white;
+    background-color: #568cc66e;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 21px;
+    color: white;
+}
+
+.filters h2 {
+    font-weight: bold;
+}
+
+.filters div{
+    margin-bottom:  20px;
+}
+
+.btn-more-filters {
+    background: none;
+    border: none;
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+}
