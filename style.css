@@ -18,7 +18,6 @@ body {
     display: flex;
     margin-left: -15px;
     margin-right: -15px;
-    flex-wrap: wrap;
 }
 
 .col-1 {
@@ -40,6 +39,12 @@ body {
     flex: 0 0 50%;
     max-width: 50%;
 }
+
+.col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}  
+
 
 .col-12 {
     flex: 0 0 100%;
@@ -219,12 +224,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 30px;
+    margin: 0 15px;
     padding: 30px;
     width: 270px;
     height: 843px;
     border-right: 1px solid white;
-    background-color: #568cc66e;
+    background-color: #7babde80;
     display: flex;
     flex-direction: column;
     padding: 30px;
@@ -274,3 +279,211 @@ body {
     background-color: #2c72b83b;
 }
 
+.goods {
+    width: 870px;
+    padding-left: 30px;
+    margin-top: 30px;
+
+}
+
+.category-way a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+
+.category-way a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.category-way span {
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.category-head {
+    justify-content: space-between;   
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 15px;
+}
+
+.category-name {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    padding: 0;
+}
+
+
+.sort {
+    background-color: #2c71b8;
+    border: 1px solid white;
+    width: 270px;
+    height: 40px;
+    color: white;
+    font-size: 21px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.goods-list {
+    padding: 0;
+}
+
+.goods-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.goods-list > ul > .col-4 {
+    padding-left: 0;
+}
+
+.item {
+    width: 270px;
+    height: 672px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+} 
+
+.item-image {
+    height: 180px;
+    background-color: #cadbed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    border: 1px white solid;
+    background-color: #2c72b89c;
+    padding: 15px 15px 30px 15px;
+}
+
+.item-description {
+    font-size: 21px;
+    font-weight: 300;
+    color: white;
+}
+
+[class*="item-char-"], .item-name {
+    margin-bottom: 20px;
+}
+
+.item-name a {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+} 
+
+.item-name a:hover {
+    text-decoration: underline;
+}
+
+[class*="item-char-"] span {
+    font-weight: bold;
+}
+
+.price {
+    padding: 10px;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+}
+
+.price sup {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    vertical-align: super;
+    margin-left: -7px;
+}
+
+.action-2 {
+    text-align: center;
+}
+
+.btn-more-details {
+    margin: 15px 0;
+    width: 210px;
+    height: 50px;
+    border: 1px white solid;
+    background-color: #2c71b8;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-more-details:hover {
+    background-color: rgba(44, 114, 184, 0)
+}
+
+.btn-add-to-cart {
+    width: 210px;
+    height: 50px;
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    background-color: #7babde80;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #7babdebe;
+}
+
+.action-2 img {
+    margin-left: 10px;
+}
+
+.btn-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.full-screen {
+    width: 30px;
+    height: 30px;
+    background-image: url(/photoshop/img/full-screen-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #2c71b8;
+    margin-bottom: 10px;
+    background-color: #cadbed;
+    cursor: pointer;
+}
+
+.full-screen:hover {
+    background-image: url(/photoshop/img/full-screen-2.png);
+    background-color: #2c71b8;
+}
+
+.like {
+    width: 30px;
+    height: 30px;
+    background-image: url(/photoshop/img/like-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid #2c71b8;
+    background-color: #cadbed;
+    cursor: pointer;
+}
+
+.like:hover {
+    background-image: url(/photoshop/img/like-2.png);
+    background-color: #2c71b8;
+}
