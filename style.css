@@ -249,6 +249,24 @@ body {
     margin-bottom: 40px;
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
+label::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-color: white;
+}
+
 .btn-more-filters {
     width: 100%;
     background: none;
