@@ -141,6 +141,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 300px;
+    /* position: relative; */
 }
 
 .search {
@@ -209,8 +210,8 @@ body {
     padding-top: 4px;
     position: absolute;
     z-index: 10;
-    right: 120px;
-    top: 20px;
+    top: -11px;
+    left: -11px;
 }
 
 .slider {
