@@ -507,6 +507,11 @@ input[type="checkbox"]:checked + label::before {
     background-color: #2c71b8;
 }
 
+.like-active-btn {
+    background-image: url(img/like-2.png);
+    background-color: #2c71b8;
+}
+
 .more {
     margin-top: 40px;
     margin-bottom: 90px;
