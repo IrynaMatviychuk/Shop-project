@@ -177,7 +177,7 @@ body {
 
 ::-webkit-input-placeholder { 
     color: #538bc4; 
-    font-size: 21px;
+    font-size: 16px;
     padding: 10px;
 }
 
@@ -536,3 +536,61 @@ input[type="checkbox"]:checked + label::before {
     text-align: center;
 }
 
+/* Add modal-block */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+.modal-block {
+    width: 300px;
+    height: 250px;
+    background-color:#286097;;
+    padding: 15px;
+    margin: 100px auto;
+}
+.form-call {
+    position: relative;
+    padding-top: 35px;
+    text-align: center;
+}
+.form-call h3 {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #cadbed;
+}
+.form-field {
+    margin-bottom: 15px;
+}
+.form-field input {
+    width: 100%;
+    line-height: 25px;
+}
+.btn-close {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    color: #cadbed;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-call {
+    width: 110px;
+    height: 30px;
+    background-color: #cadbed;
+    margin-top: 10px;
+    color: #286097;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
