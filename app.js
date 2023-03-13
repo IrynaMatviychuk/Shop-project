@@ -51,3 +51,9 @@ function showModalByScroll() {
   }
 }
 window.addEventListener("scroll", showModalByScroll);
+
+// Slider
+$(".slider").slick({
+    autoplay: true,
+    dots: true,
+});

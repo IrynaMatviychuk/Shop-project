@@ -589,3 +589,19 @@ input[type="checkbox"]:checked + label::before {
 .hide {
     display: none;
 }
+/* Add slider */
+.slider {
+    display: flex;    
+    align-items: center;
+}
+.slider > div {
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.678);
+    text-align: center;
+}
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+    opacity: 0.75;
+    position: relative;
+    left: -5px;
+}
