@@ -54,6 +54,67 @@ window.addEventListener("scroll", showModalByScroll);
 
 // Slider
 $(".slider").slick({
-    autoplay: true,
-    dots: true,
+  autoplay: true,
+  dots: true,
 });
+
+//  Product-quantity
+
+// Знайдемо всі .decrement-btn та .increment-btn, але витягнемо лише нульові. Знайдемо input в .product-quantity
+let decrementBtns = document.querySelectorAll(".decrement-btn");
+let incrementBtns = document.querySelectorAll(".increment-btn");
+let productsCount = document.querySelectorAll(".product-quantity input");
+
+function Counter(incrementBtn, decrementBtn, inputField) {
+  // ми могли б написати this.incrementBtn = incrementBtn; АЛЕ напишемо:
+  this.domRefs = {
+    incrementBtn,
+    decrementBtn,
+    inputField,
+  };
+
+  // Дізнатися який зараз count та встановити min та max значення
+  this.toggleButtonState = function () {
+    let count = this.domRefs.inputField.value;
+    this.domRefs.decrementBtn.disabled = count <= 1;
+    this.domRefs.incrementBtn.disabled = count >= 10;
+  };
+
+  // Викликаємо Ф
+  this.toggleButtonState();
+
+  // робимо, щоб число збільшувалося та зменшувалося: дізнаємось яке значення в input та додаємо до нього 1
+  this.increment = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+    // викликаємо toggleButtonState(), коли клікаємо на кнопку increment
+    this.toggleButtonState();
+  };
+
+  this.decrement = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+    // викликаємо toggleButtonState(), коли клікаємо на кнопку decrement
+    this.toggleButtonState();
+  };
+
+  // Викликаємо збільшення / зменшення при кліку на + / -
+  this.domRefs.incrementBtn.addEventListener(
+    "click",
+    this.increment.bind(this)
+  );
+  this.domRefs.decrementBtn.addEventListener(
+    "click",
+    this.decrement.bind(this)
+  );
+}
+
+// Оголошуємо змінну, створюємо об'єкт за допомогою Ф-конструктора (лише для одної категорії товару)
+// const counter1 = new Counter(incrementBtns, decrementBtns, productsCount);
+// console.log(counter1);
+
+// Те ж саме для всіх категорій товарів. Створюємо counters:
+let counters = [];
+// Пройдемось по полях
+productsCount.forEach(
+  (item, i) =>
+    (counters[i] = new Counter(incrementBtns[i], decrementBtns[i], item))
+);

@@ -356,6 +356,7 @@ input[type="checkbox"]:checked + label::before {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    /* gap: 30px 0; */
 }
 
 .goods-list > ul > .col-4 {
@@ -368,6 +369,7 @@ input[type="checkbox"]:checked + label::before {
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-bottom: 50px;
 } 
 
 .item-image {
@@ -382,7 +384,7 @@ input[type="checkbox"]:checked + label::before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 500px;
+    height: 520px;
     border: 1px white solid;
     background-color: #2c72b89c;
     padding: 15px 15px 30px 15px;
@@ -604,4 +606,10 @@ input[type="checkbox"]:checked + label::before {
     opacity: 0.75;
     position: relative;
     left: -5px;
+}
+
+/* product-quantity */
+.product-quantity {
+    text-align: center;
+    margin-bottom: 10px;
 }
